@@ -7,24 +7,16 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>weblog-web</artifactId>
+    <artifactId>weblog-module-admin</artifactId>
     <packaging>jar</packaging>
 
-    <name>weblog-web</name>
-    <description>weblog-web (入口项目，负责博客前台展示相关功能，打包也放在这个模块负责)</description>
+    <name>weblog-module-admin</name>
+    <description>weblog-admin (负责管理后台相关功能)</description>
 
     <dependencies>
         <dependency>
             <groupId>cn.wzk</groupId>
-            <artifactId>weblog-module-admin</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.wzk</groupId>
             <artifactId>weblog-module-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -37,13 +29,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>

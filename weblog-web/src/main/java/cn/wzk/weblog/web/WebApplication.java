@@ -1,4 +1,4 @@
-package cn.wzk;
+package cn.wzk.weblog.web;
 
 // 正确完整导入
 import org.springframework.boot.SpringApplication;

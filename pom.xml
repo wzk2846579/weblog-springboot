@@ -19,6 +19,8 @@
 
   <modules>
     <module>weblog-web</module>
+    <module>weblog-module-admin</module>
+    <module>weblog-module-common</module>
   </modules>
 
   <properties>
@@ -27,11 +29,35 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
+    <guava.version>31.1-jre</guava.version>
+    <commons-lang3.version>3.12.0</commons-lang3.version>
   </properties>
 
   <!-- 统一依赖管理 -->
   <dependencyManagement>
-
+    <dependencies>
+      <dependency>
+        <groupId>cn.wzk</groupId>
+        <artifactId>weblog-module-admin</artifactId>
+        <version>${revision}</version>
+      </dependency>
+      <dependency>
+        <groupId>cn.wzk</groupId>
+        <artifactId>weblog-module-common</artifactId>
+        <version>${revision}</version>
+      </dependency>
+      <!--常用工具-->
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${commons-lang3.version}</version>
+      </dependency>
+    </dependencies>
   </dependencyManagement>
 
   <build>
