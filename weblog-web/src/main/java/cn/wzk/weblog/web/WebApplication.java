@@ -8,9 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author wangzk16
  * @date 2026年06月15日 16:38
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "cn.wzk.weblog")
 public class WebApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);
     }
